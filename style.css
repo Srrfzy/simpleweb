@@ -1,0 +1,242 @@
+/* 明日方舟风格的CSS */
+
+/* 全局样式 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5; /* 浅灰色背景 */
+    color: #333; /* 深灰色文字 */
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 容器样式 */
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff; /* 白色背景 */
+    padding: 30px;
+    border-radius: 8px; /* 轻微圆角 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 柔和阴影 */
+}
+
+/* 标题样式 */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #2c3e50; /* 深蓝色调 */
+}
+
+/* 列表样式 */
+ul {
+    list-style: none;
+    width: 100%;
+}
+
+li {
+    margin-bottom: 1rem;
+}
+
+a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: #2c3e50;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+/* 表格样式 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    background-color: #fff;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f0f0f0;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #000;
+    color: #0f0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+/* 标题样式 */
+.arknights-title {
+    font-size: 2em; /* 标题字体大小 */
+    margin-bottom: 10px; /* 标题与下文之间的距离 */
+    text-align: center; /* 标题居中 */
+    color: #FFB300; /* 明日方舟特有的橙色 */
+}
+
+/* 标题样式 */
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
+    animation: neon-flicker 1.5s infinite alternate;
+}
+
+@keyframes neon-flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow:
+            0 0 10px #0f0,
+            0 0 20px #0f0,
+            0 0 30px #0f0,
+            0 0 40px #0f0,
+            0 0 70px #0f0,
+            0 0 80px #0f0,
+            0 0 100px #0f0,
+            0 0 150px #0f0;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+/* 列表样式 */
+ul {
+    list-style: none;
+    width: 80%;
+    max-width: 600px;
+}
+
+li {
+    margin-bottom: 1rem;
+}
+
+a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: #0f0;
+    border: 2px solid #0f0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px #0f0;
+}
+
+a:hover {
+    background-color: #0f0;
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px #0f0, 0 0 40px #0f0;
+}
+
+/* 表格样式 */
+table {
+    width: 80%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #0f0;
+}
+
+th {
+    background-color: #0f0;
+    color: #000;
+    text-transform: uppercase;
+}
+
+tr {
+    transition: background-color 0.3s ease;
+}
+
+tr:hover {
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+/* 背景动画 */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 255, 0, 0.1),
+        rgba(0, 255, 0, 0.1) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* 角色链接样式 */
+.actor-link {
+    color: #FFB300; /* 明日方舟橙色 */
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 179, 0, 0.5);
+}
+
+/* 悬停效果 */
+.actor-link:hover {
+    color: #FFD700; /* 金色 */
+    text-shadow: 0 0 10px rgba(255, 179, 0, 0.8);
+}
+
+/* 角色属性显示区域 */
+#actors-display {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border: 1px solid #FFB300;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
